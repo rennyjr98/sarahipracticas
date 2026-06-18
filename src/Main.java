@@ -19,6 +19,9 @@ void main() {
     hola+=" hola tioxd";
     hola+=5;
     System.out.println("tuedad: "+tuedad(-1));
+    System.out.println(clientadminotrabajador("Cliente"));
+    System.out.println(wasd('s'));
+    System.out.println(obtenernumdelnombre(null));
 }
 
 int sumapositivos(int a,int b){
@@ -68,4 +71,41 @@ String tuedad (int edad){
         return "es un joven";
     else
         return "es un adulto";
+}
+String clientadminotrabajador (String rol){
+    if (rol.equalsIgnoreCase("cliente"))
+        return "Cliente";
+    if (rol.equalsIgnoreCase("administrador"))
+        return "Administrador";
+    if (rol.equalsIgnoreCase("trabajador"))
+        return "Trabajador";
+    return null;
+}
+
+double formulaPerimetro(double d){
+      return 3.1416*d;
+}
+
+double formulaP (double r){
+    return 2*3.1416*r;
+}
+
+String wasd (char tecla){
+    if (tecla=='w')
+        return "Arriba";
+    if (tecla=='a')
+        return "Izquierda";
+    if (tecla=='s')
+        return "Abajo";
+    if (tecla=='d')
+        return "Derecha";
+    return null;
+}
+
+int obtenernumdelnombre (String nombre){
+    if (nombre==null)
+        return -1;
+    if (nombre.equalsIgnoreCase("Sarahi"))
+        return 1;
+    return 0;
 }
