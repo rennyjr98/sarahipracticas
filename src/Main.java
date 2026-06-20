@@ -22,6 +22,8 @@ void main() {
     System.out.println(clientadminotrabajador("Cliente"));
     System.out.println(wasd('s'));
     System.out.println(obtenernumdelnombre(null));
+
+    System.out.println(practicaswitch("admin"));
 }
 
 int sumapositivos(int a,int b){
@@ -109,3 +111,24 @@ int obtenernumdelnombre (String nombre){
         return 1;
     return 0;
 }
+
+boolean practicaswitch (String rol){
+    boolean x=5==5;
+    int g=4*20/16;
+    int p=1;
+    if (p==1){
+        System.out.println("p es verdadera");
+    }
+    switch (rol){
+        case "admin":case "cliente":
+            System.out.println("admin");
+
+            System.out.println("cliente");
+            break;
+        default:
+            System.out.println("desconocido");
+            break;
+    }
+    return true;
+}
+
