@@ -3,6 +3,8 @@ Scanner scanner=new Scanner(System.in);
 
 void main(){
     int option=-1;
+    Bank renybank=new Bank();
+
     do{System.out.println("Cajero automático");
         System.out.println("Opciones:\n1)Consultar saldo\n2)Depositar dinero\n3)Retirar dinero\n4)Salir");
         System.out.print("Elija una opción:");
@@ -10,11 +12,15 @@ void main(){
         System.out.println("\n");
 
         switch(option){
-            case 1:checkMoney();
+            case 1:renybank.printAccount();
             break;
-            case 2:addMoney();
+            case 2:
+                System.out.print("¿Cuánto dinero desea depositar?:");
+                renybank.addMoney(scanner.nextDouble());
             break;
-            case 3:decreaseMoney();
+            case 3:
+                System.out.print("¿Cuánto dinero desea retirar?:");
+                renybank.decreaseMoney(scanner.nextDouble());
             break;
         }
     }while (option!=4);
